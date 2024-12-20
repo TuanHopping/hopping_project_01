@@ -6,6 +6,11 @@ html {
   font-size: 62.5%;
 }
 
+:root {
+  --font-heading: "Sen";
+  --primary-color: rgb(158, 158, 11);
+}
+
 body {
   font-size: 1.6rem;
 }
@@ -24,7 +29,7 @@ a {
   text-align: center;
   font-size: 1.6rem;
   font-weight: 500;
-  border-radius: 23px;
+  border-radius: 999px;
   background-color: black;
 }
 
@@ -73,4 +78,106 @@ a {
 
 .header .btn-sign-up {
   min-width: 144px;
+}
+
+.hero {
+  padding: 54px 0 65px;
+  background-color: blue;
+}
+
+.hero .body {
+  display: flex;
+}
+
+/* ===== Hero left ===== */
+.hero .media-block {
+  position: relative;
+  width: 48%;
+}
+
+.hero .media-block .img {
+  width: 470px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.hero .hero-summary {
+  width: 270px;
+  position: absolute;
+  bottom: 48px;
+  right: 0;
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+.hero-summary .item {
+  display: flex;
+  align-item: center;
+}
+
+.hero-summary .item + .item {
+  margin-top: 22px;
+}
+
+.hero-summary .icon {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-summary .icon img {
+  width: 48px;
+}
+
+.hero-summary .info {
+  margin-left: 16px;
+}
+
+.hero-summary .label {
+  font-size: 1.4rem;
+  line-height: 1.86;
+}
+
+.hero-summary .description {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67;
+}
+
+/* ===== Hero right ===== */
+.hero .content-block {
+  width: 52%;
+  padding-left: 130px;
+  padding-top: 64px;
+}
+
+.hero .heading {
+  font-family: var(font-heading);
+  font-size: 5.8rem;
+  font-weight: 700;
+  line-height: 1.17;
+}
+
+.hero .desc {
+  margin-top: 22px;
+  font-size: 1.8rem;
+  line-height: 1.67;
+}
+
+.hero .cta-group {
+  align-items: center;
+  margin-top: 38px;
+}
+
+.hero-cta {
+  line-height: 64px;
+  min-width: 180px;
+  background-color: var(--primary-color);
+}
+
+.hero .watch-video {
+  margin-left: 28px;
+  border: none;
+  background: transparent;
 }
