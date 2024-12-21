@@ -90,61 +90,40 @@ a {
   text-shadow: 1px 0 0 currentColor;
 }
 
-/* .header .btn-sign-up {
+.header .btn-sign-up {
   min-width: 144px;
-} */
-
-/* ===== Tour list ===== */
-.popular .tour-list {
-  margin-top: 55px;
-  display: flex;
-  gap: 30px;
 }
 
-.popular .tour-list .thumb {
-  width: 100%;
-  border-radius: 12px 12px;
-  object-fit: cover;
-}
-
-.popular .tour-list .tour-item {
-}
-
-.popular .tour-list .info {
-  padding: 16px 22px 22px;
-}
-
-.popular .tour-list .title {
-  font-size: 2.5rem;
-  text-align: center;
-  font-weight: bold;
-  color: blue;
-  line-height: 1.67;
-}
-
-.popular .tour-list .desc {
-  font-size: 1.8rem;
-  line-height: 1.86;
-}
-
-/* .hero {
+.hero {
   padding: 54px 0 65px;
   background-color: blue;
 }
 
 .hero .body {
   display: flex;
-} */
+}
 
+/* ===== Tour list ===== */
+.tour-list {
+  display: flex;
+}
+
+.tour-list .thumb{
+  width: 100%;
+}
+
+.tour-list .tour-item{
+  w
+}
 /* ===== Hero left ===== */
-/* .hero .media-block {
+.hero .media-block {
   position: relative;
   width: 48%;
 }
 
 .hero .media-block .img {
   width: 470px;
-
+  object-fit: cover;
   border-radius: 20px;
 }
 
@@ -190,10 +169,10 @@ a {
   font-size: 1.8rem;
   font-weight: 600;
   line-height: 1.67;
-} */
+}
 
 /* ===== Hero right ===== */
-/* .hero .content-block {
+.hero .content-block {
   width: 52%;
   padding-left: 130px;
   padding-top: 64px;
@@ -227,4 +206,32 @@ a {
   margin-left: 28px;
   border: none;
   background: transparent;
-} */
+}
+
+.popular {
+  margin-top: 135px;
+  padding: 65px 0;
+}
+
+.popular .course-list {
+  margin-top: 55px;
+  display: flex;
+  gap: 30px;
+}
+
+.popular .course-item .thumb {
+  width: 100%;
+  border-radius: 12px 12px;
+  object-fit: cover;
+}
+
+.popular .course-item .info {
+  padding: 16px 22px 22px;
+}
+
+.course-item .title {
+  font-size: 3rem;
+  color: blue;
+  text-align: center;
+  padding: 12px;
+}
