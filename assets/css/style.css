@@ -20,211 +20,38 @@ a {
   text-decoration: none;
 }
 
-.heading-lv2 {
-  font-size: 3.8rem;
-  font-weight: bolder;
-  line-height: 1.27;
-  text-align: center;
+/* NEW HEADER */
+.container-fluid {
+  display: flex;
+  height: 68px;
+  background-color: yellow;
+  align-items: center;
 }
 
-.btn {
-  display: inline-block;
-  min-width: 118px;
-  padding: 0 16px;
-  line-height: 50px;
-  color: white;
-  text-align: center;
-  font-size: 1.6rem;
-  font-weight: 500;
-  border-radius: 999px;
-  background-color: black;
-}
-
-/* ======== Header ======== */
-.header {
-  background-color: #3481c4;
-}
-
-.header.fixed {
-  z-index: 1;
+.container-fluid.fixed {
   position: sticky;
-  top: -28px;
+  top: -1px; /* khoảng cách sẽ dừng lại - chưa biết tính sao cho đúng */
 }
 
-.header .main-content .logo {
-  width: 180px;
+.container-fluid .logo {
+  width: 100px;
 }
-
-.header .body {
-  display: flex;
-  align-items: center;
-  padding: 36px 0 8px;
-}
-
-.nav {
-  margin-left: auto;
-}
-
-.nav ul {
-  color: white;
+.nav .navbar-menu {
   display: flex;
 }
 
-.main-content {
-  width: 1170px;
-  max-width: calc(100% - 48px);
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.nav a {
-  color: white;
-  font-size: 2.5rem;
-  font-weight: bolder;
-  padding: 8px 21px;
-}
-
-.nav a:hover {
-  color: black;
-  /* font-weight: 600; */
-  text-shadow: 1px 0 0 currentColor;
-}
-
-/* .header .btn-sign-up {
-  min-width: 144px;
-} */
-
-/* ===== Tour list ===== */
-.popular .tour-list {
-  margin-top: 55px;
-  display: flex;
-  gap: 30px;
-}
-
-.popular .tour-list .thumb {
-  width: 100%;
-  border-radius: 12px 12px;
-  object-fit: cover;
-}
-
-.popular .tour-list .tour-item {
-}
-
-.popular .tour-list .info {
-  padding: 16px 22px 22px;
-}
-
-.popular .tour-list .title {
-  font-size: 2.5rem;
-  text-align: center;
-  font-weight: bold;
-  color: blue;
-  line-height: 1.67;
-}
-
-.popular .tour-list .desc {
-  font-size: 1.8rem;
-  line-height: 1.86;
-}
-
-/* .hero {
-  padding: 54px 0 65px;
-  background-color: blue;
-}
-
-.hero .body {
-  display: flex;
-} */
-
-/* ===== Hero left ===== */
-/* .hero .media-block {
-  position: relative;
-  width: 48%;
-}
-
-.hero .media-block .img {
-  width: 470px;
-
-  border-radius: 20px;
-}
-
-.hero .hero-summary {
-  width: 270px;
-  position: absolute;
-  bottom: 48px;
-  right: 0;
-  border-radius: 12px;
-  background-color: #fff;
-}
-
-.hero-summary .item {
-  display: flex;
-  align-item: center;
-}
-
-.hero-summary .item + .item {
-  margin-top: 22px;
-}
-
-.hero-summary .icon {
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-summary .icon img {
-  width: 48px;
-}
-
-.hero-summary .info {
-  margin-left: 16px;
-}
-
-.hero-summary .label {
-  font-size: 1.4rem;
-  line-height: 1.86;
-}
-
-.hero-summary .description {
+.nav .navbar-menu a {
+  color: rgb(119, 119, 119);
   font-size: 1.8rem;
   font-weight: 600;
-  line-height: 1.67;
-} */
-
-/* ===== Hero right ===== */
-/* .hero .content-block {
-  width: 52%;
-  padding-left: 130px;
-  padding-top: 64px;
+  padding: 20px 26px;
 }
 
-.hero .heading {
-  font-family: var(font-heading);
-  font-size: 5.8rem;
-  font-weight: 700;
-  line-height: 1.17;
+.nav .navbar-menu a:hover {
+  color: black;
+  font-weight: 900;
 }
 
-.hero .desc {
-  margin-top: 22px;
-  font-size: 1.8rem;
-  line-height: 1.67;
+.header-contact {
+  margin-left: auto;
 }
-
-.hero .cta-group {
-  align-items: center;
-  margin-top: 38px;
-}
-
-.hero-cta {
-  line-height: 64px;
-  min-width: 180px;
-  background-color: var(--primary-color);
-}
-
-.hero .watch-video {
-  margin-left: 28px;
-  border: none;
-  background: transparent;
-} */
