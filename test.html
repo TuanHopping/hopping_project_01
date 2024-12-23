@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main_recommend_item {
+        display: block; /* Make the <a> a block element */
+        width: 300px; /* Example width - adjust as needed */
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-decoration: none; /* Remove underline from link */
+        color: black;
+        overflow: hidden; /* Important for containing floated elements */
+      }
+      .recommend_thumb {
+        float: left; /* Float the image to the left */
+        margin-right: 10px;
+      }
+      .recommend_thumb img {
+        max-width: 100px;
+        height: auto;
+      }
+      .recommend_desc {
+        overflow: hidden; /* Important to prevent text from wrapping around the floated image */
+      }
+      .item-price {
+        margin-bottom: 5px;
+      }
+      .text-overflow-ellipsis {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .recommend_desc h5 {
+        margin-top: 0; /*reset default margin*/
+      }
+    </style>
+  </head>
+  <body>
+    <a class="main_recommend_item" href="#">
+      <div class="recommend_thumb">
+        <img src="./assets/img/gallery/recommend_1.png" alt="" />
+      </div>
+      <div class="recommend_desc">
+        <div class="item-price">
+          <span class="price_block price_full_rent">전</span>
+          <span>10억</span>
+        </div>
+        <h5 class="text-overflow-ellipsis">
+          50. 주인거주. 방4화2. Lorem ipsum dolor sit amet consectetur,
+          adipisicing elit. Lorem, ipsum.
+        </h5>
+        <p class="text-overflow-ellipsis">
+          50. 주인거주. 방4화2. 가구가전 Lorem ipsum dolor sit amet.…
+        </p>
+      </div>
+    </a>
+  </body>
+</html>
