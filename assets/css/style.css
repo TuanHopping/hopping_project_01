@@ -2,147 +2,373 @@
   box-sizing: border-box;
 }
 
+/* Quy đổi 1 rem = 10px */
 html {
   font-size: 62.5%;
 }
 
+/* Variables */
 :root {
-  --primary-color: rgb(158, 158, 11);
+  --primary-color: #3481c4;
 }
 
-body {
+/* Khôi phục font-size mặc định 16px gốc */
+Body {
   font-size: 1.6rem;
 }
 
-/* ======== Common ======== */
+/* ========== Common ========== */
 a {
   text-decoration: none;
 }
 
-.container {
+.heading2 {
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 1.27;
+}
+
+.main-content {
   width: 1170px;
-  max-width: calc(100% - 48px);
+  /* Căn giữa các phần tử (không cho lệnh sang trái/phải) */
   margin-left: auto;
   margin-right: auto;
+  /* Tránh bị ẩn phần tử khi thu nhỏ trình duyệt */
+  max-width: calc(100% - 48px);
 }
 
-/* NEW HEADER */
-.container-fluid {
+/* ========== HEADER ========== */
+.header {
+  background: var(--primary-color);
+}
+
+.header .body {
   display: flex;
-  height: 68px;
-  background-color: yellow;
   align-items: center;
+  padding: 36px 0 8px;
 }
 
-.container-fluid.fixed {
+/* Tạo Sticky - vào phần tử có đồng thời 2 class */
+.header.fixed {
   position: sticky;
-  top: -1px; /* khoảng cách sẽ dừng lại - chưa biết tính sao cho đúng */
+  /* Chống kéo xuống bị vướng ảnh */
+  z-index: 1;
+  /* Kéo xuống 8px sẽ dừng lại */
+  top: -28px;
+  /* Kéo xuống sẽ dừng lại luôn (không bị thu nhỏ Nav lại) */
+  /* top: 0px; */
 }
 
-.container-fluid .logo {
-  width: 100px;
-}
-.nav .navbar-menu {
+.nav ul {
   display: flex;
 }
 
-.nav .navbar-menu a {
-  color: rgb(119, 119, 119);
+.nav {
+  /* Kéo Nav-menu và Contact qua bên phải */
+  margin-left: auto;
+}
+
+/* Tự thêm riêng */
+.header .logo {
+  width: 200px;
+}
+
+.nav a {
+  color: #fff;
   font-size: 1.8rem;
   font-weight: 600;
-  padding: 20px 26px;
+  padding: 40px 26px; /* Có thể mở link phạm vi rộng hơn - chỉnh lại size sau */
 }
 
-.nav .navbar-menu a:hover {
+.nav a:hover {
   color: black;
-  font-weight: 900;
+  /* text-shadow: 1px 0 0 currentColor; */
+  font-weight: 900px;
 }
 
 .header-contact {
-  margin-left: auto;
+  display: flex;
+  align-items: center;
 }
 
-.tel_text {
-  font-size: 14px;
+.header-contact .link-tel {
+  display: inline-block; /* Để có thể thêm padding */
+  padding: 10px 16px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  background: #c3c5d2;
+  border-radius: 4px;
+  border: 1px dashed #2b325f;
+}
+
+.text-tel {
+  font-size: 1.8rem;
   vertical-align: middle;
-  background-color: rgba(43, 50, 95, 0.7) !important;
-  color: #fff !important;
+  background-color: rgba(43, 50, 95, 0.7);
+  color: white;
   padding: 5px;
   border-radius: 4px;
   margin-right: 5px;
 }
 
-.top-link-phone {
-  background: rgba(43, 50, 95, 0.2);
-  padding: 10px;
-  border-radius: 4px;
-  color: #2b325f;
-  border: 1px dashed #2b325f;
-}
-
-/* Category */
-
-.container .slick-list {
-  margin-top: 55px;
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-}
-
-.slick-list .thumb {
-  width: 100%;
-  border-radius: 12px 12px;
+.top-link-Kakao {
+  margin-left: 24px;
+  width: 42px;
   object-fit: cover;
 }
 
-.slick-list .title {
-  padding: 20px;
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
+/* ~~~~~ Hero ~~~~~ */
+.hero {
+  padding: 55px;
+  /* Bgc tạm */
+  background: rgb(228, 197, 148);
 }
 
-/* Main_section recommend */
-
-.container .recommend_zone {
-  margin-top: 55px;
+.hero .body {
   display: flex;
-  gap: 30px;
-  justify-content: center;
-  background-color: #efefef;
-  padding: 40px;
 }
 
-.recommend_item {
+/* ~~~~~ Left ~~~~~ */
+
+.hero .media-block {
+  /* Width cho phần bên trái */
+  width: 48%;
+  position: relative;
+}
+
+.hero .hero-summary {
+  width: 270px;
+  padding: 24px; /* không set Height để chiều cao thay đổi linh hoạt */
+  position: absolute;
+  bottom: 48px; /* Cách dưới */
+  right: 0; /* Cách phải */
   border-radius: 12px;
-  background-color: #fff;
-  padding: 20px;
-  border: 1px solid #dcdcdc;
+  background: #fff;
 }
 
-.recommend_thumb {
-  width: 100%;
-  border-radius: 12px 12px;
+.hero .media-block .img {
+  /* Điều chỉnh kích thước ảnh cho vừa frame */
+  width: 450px;
+  height: 600px;
   object-fit: cover;
-  height: 350px;
+  border-radius: 20px;
 }
 
-.recommend_desc {
-  padding: 15px 27px;
-}
-.price_full_rent {
-  background-color: #ff9f33 !important;
+.hero-summary .item {
+  display: flex;
+  align-items: center; /* Căn giữa icon theo trục dọc */
 }
 
-.price_block {
-  color: #fff;
+/* Từ item thứ 2 trở đi, margin-top 22px */
+.hero-summary .item + .item {
+  margin-top: 22px;
+}
+
+.hero-summary .icon-box {
+  width: 48px;
+  height: 48px;
+  background: rgb(78, 201, 17);
+  border-radius: 50%;
+  /* Căn giữa Icon so với box */
+  display: flex;
+  justify-content: center; /* căn giữa trục ngang */
+  align-items: center; /* căn giữa trục đứng */
+}
+
+.hero-summary .icon {
+  /* Điều chỉnh size icon nhỏ lại */
+  width: 35px;
+}
+
+.hero-summary .info {
+  margin-left: 16px;
+}
+
+.hero-summary .label {
+  color: rgb(108, 74, 203);
   font-size: 1.8rem;
-  border-radius: 3px;
-  padding: 2px 3px;
+  line-height: 1.86; /* Height của phần tử */
 }
 
-.text-overflow-ellipsis {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.hero-summary .title {
+  color: rgb(193, 16, 16);
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.9; /* Height của phần tử 186% */
+}
+
+/* ~~~~~ Right ~~~~~ */
+
+.hero .content-block {
+  width: 52%; /* Width cho phần bên phải */
+  padding-left: 130px; /* Khoảng cách với Left */
+  padding-top: 64px; /* Khoảng cách với khối Hero */
+}
+
+.hero .heading {
+  font-size: 5.8rem;
+}
+
+.hero .desc {
+  margin-top: 22px;
+  font-size: 1.8rem;
+  line-height: 1.67;
+}
+
+.hero .cta-group {
+  margin-top: 38px;
+  display: flex;
+  align-items: center;
+}
+
+.cta-group-btn {
+  display: inline-block; /* Để có thể thêm padding */
+  background: yellowgreen;
+  min-width: 180px; /* Chiều rộng button */
+  height: 40px; /* Chiều cao button - tạm */
+  padding: 10px 16px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 999px;
+}
+
+.video-play-icon {
+  width: 30px;
+}
+
+.hero .watch-video {
+  border: none; /* Bỏ viền mặc định */
+  background: transparent; /* Bg trong suốt */
+  display: flex;
+  align-items: center;
+  margin-left: 24px;
+  cursor: pointer; /* Thêm hình Bàn tay */
+}
+
+.hero .watch-video .icon {
+  width: 48px;
+  height: 48px;
+  display: flex; /* Căn giữa icon ­*/
+}
+
+.hero .watch-video span {
+  margin-left: 12px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67;
+}
+
+.hero .stats strong {
+  font-size: 4.4rem;
+  font-weight: 800;
+  line-height: 1.23;
+  margin-right: 15px;
+}
+
+/* ~~~~~ Popular ~~~~~ */
+.popular {
+  margin-top: 130px;
+  padding: 65px 0;
+  background: rebeccapurple;
+}
+
+.popular-top {
+  display: flex;
+  /* Cho 2 Icon (Pre/Next) giãn về 2 phía */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popular-top .desc {
+  margin-top: 16px;
+  width: 480px;
+  font-size: 1.8rem;
+  line-height: 1.67;
+}
+
+.popular-top .controls {
+  /* Khoảng cách giữa 2 button */
+  display: flex;
+  gap: 18px;
+}
+
+.popular-top .control-btn {
+  background: transparent;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #ffb900;
+}
+
+/* ~~~~~ Course List ~~~~~ */
+.popular .course-list {
+  display: flex;
+  margin-top: 55px;
+  gap: 30px;
+}
+
+.popular .course-list a {
+  /* Đổi màu chữ các thẻ a trong .course-list */
+  color: rgb(93, 171, 9); /* draft */
+}
+
+.popular .course-item {
+  border-radius: 12px;
+  background: #fff;
+  border: 3px solid #c3c5d2;
+}
+
+.popular .course-list .thumb {
+  /* Điều chỉnh size ảnh lại cho vừa */
+  width: 100%;
+  height: 278px; /* Fix luôn height*/
+  object-fit: cover;
+  border-radius: 12px 12px;
+}
+
+.popular .course-item .info {
+  padding: 16px 22px 22px;
+}
+
+/* Kết hợp Selector - cho 2 nhóm */
+.popular .course-item .head,
+.popular .course-list .rating,
+.popular .course-list .foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* giãn 2 phần tử ra 2 đầu*/
+}
+
+.popular .course-list .title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1.7;
+}
+
+.popular .course-item .star {
+  width: 30px;
+}
+
+.popular .course-list .value {
+  margin-left: 6px;
+  color: #ffb900;
+  font-size: 1.8rem;
+  line-height: 1.7;
+}
+
+.popular .course-list .desc {
+  margin-top: 6px;
+  font-size: 1.6rem;
+  line-height: 1.86;
+}
+
+.popular .course-list .foot {
+  margin-top: 12px;
+}
+
+.popular .course-list .price {
+  font-size: 2.3rem;
+  font-weight: 800;
+  line-height: 1.6;
 }

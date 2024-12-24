@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --primary-color: rgb(158, 158, 11);
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+/* ======== Common ======== */
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 1170px;
+  max-width: calc(100% - 48px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* NEW HEADER */
+.container-fluid {
+  display: flex;
+  height: 68px;
+  background-color: yellow;
+  align-items: center;
+}
+
+.container-fluid.fixed {
+  position: sticky;
+  top: -1px; /* khoảng cách sẽ dừng lại - chưa biết tính sao cho đúng */
+}
+
+.container-fluid .logo {
+  width: 100px;
+}
+.nav .navbar-menu {
+  display: flex;
+}
+
+.nav .navbar-menu a {
+  color: rgb(119, 119, 119);
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 20px 26px;
+}
+
+.nav .navbar-menu a:hover {
+  color: black;
+  font-weight: 900;
+}
+
+.header-contact {
+  margin-left: auto;
+}
+
+.tel_text {
+  font-size: 14px;
+  vertical-align: middle;
+  background-color: rgba(43, 50, 95, 0.7) !important;
+  color: #fff !important;
+  padding: 5px;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+.top-link-phone {
+  background: rgba(43, 50, 95, 0.2);
+  padding: 10px;
+  border-radius: 4px;
+  color: #2b325f;
+  border: 1px dashed #2b325f;
+}
+
+/* Category */
+
+.container .slick-list {
+  margin-top: 55px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.slick-list .thumb {
+  width: 100%;
+  border-radius: 12px 12px;
+  object-fit: cover;
+}
+
+.slick-list .title {
+  padding: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Main_section recommend */
+
+.container .recommend_zone {
+  margin-top: 55px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  background-color: #efefef;
+  padding: 40px;
+}
+
+.recommend_item {
+  border-radius: 12px;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #dcdcdc;
+}
+
+.recommend_thumb {
+  width: 100%;
+  border-radius: 12px 12px;
+  object-fit: cover;
+  height: 350px;
+}
+
+.recommend_desc {
+  padding: 15px 27px;
+}
+.price_full_rent {
+  background-color: #ff9f33 !important;
+}
+
+.price_block {
+  color: #fff;
+  font-size: 1.8rem;
+  border-radius: 3px;
+  padding: 2px 3px;
+}
+
+.text-overflow-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
